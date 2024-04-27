@@ -4,6 +4,7 @@ using UnityEngine;
 public class ClosedDoor : MonoBehaviour
 {
     [SerializeField] private TMP_Text helpMessage;
+    [SerializeField] private GameObject openedDoor;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,6 +19,7 @@ public class ClosedDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<player>().hasKey && Input.GetKey(KeyCode.E))
         {
+            Instantiate(openedDoor, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
