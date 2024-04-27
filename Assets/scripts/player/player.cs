@@ -12,6 +12,7 @@ public class player : MonoBehaviour
     private Vector2 movement;
     private Rigidbody2D rb;
     private bool facingRight = true;
+    public bool hasKey;
 
     
     void Start()
