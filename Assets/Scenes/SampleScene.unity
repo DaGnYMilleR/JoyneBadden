@@ -1958,11 +1958,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 40616453371919656, guid: 54739152650f19a4e8a028cb92f6bd6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.18
       objectReference: {fileID: 0}
     - target: {fileID: 40616453371919656, guid: 54739152650f19a4e8a028cb92f6bd6e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 40616453371919656, guid: 54739152650f19a4e8a028cb92f6bd6e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2006,7 +2006,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6993586970117109005, guid: 54739152650f19a4e8a028cb92f6bd6e, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2370,7 +2370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 79908bdda5957854fb8d444b60ebf1b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
