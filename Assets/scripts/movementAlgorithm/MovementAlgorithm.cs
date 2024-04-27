@@ -21,7 +21,7 @@ public class MovementAlgorithm : MonoBehaviour
         }
     }
 
-    private void ExecuteGame()
+    public void ExecuteGame()
     {
         var turnsCount = random.Next(5, 10);
         for (var i = 0; i < turnsCount; i++)
