@@ -33,6 +33,11 @@ public class player : MonoBehaviour
             Flip();
     }
 
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        gameObject.GetComponent<Rigidbody2D>().WakeUp();
+    }
+
     private void Flip()
     {
         facingRight = !facingRight;
