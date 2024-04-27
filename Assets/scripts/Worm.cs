@@ -23,7 +23,7 @@ public class Worm : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("ShellGame");
+            SceneManager.LoadScene("shall");
             key.ShowKey();
         }
     }

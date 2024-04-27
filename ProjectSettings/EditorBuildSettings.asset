@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BabyBaddenRoom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Final.unity
     guid: 5275a1086ee9ff440a60e2d46e22c244
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ShellGame.unity
     guid: 0d8cfccc0db1f314b9d49b743dd4e003
   - enabled: 1
     path: Assets/Scenes/Vzrosliy.unity
     guid: 368ae0f1c4ba6014ba61bc2234e15ef8
+  - enabled: 1
+    path: Assets/Scenes/shall.unity
+    guid: 0179256c2648f3c4aafbdf34978a1f0f
   - enabled: 1
     path: Assets/Scenes/BaddensSpeaking.unity
     guid: 856d159d658690d4d8acc2bb867c4bcb
