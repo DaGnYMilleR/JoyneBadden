@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Worm : MonoBehaviour
+public class Interactive : MonoBehaviour
 {
     [SerializeField] private Text text;
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -15,12 +14,12 @@ public class Worm : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
-            SceneManager.LoadScene("ShellGame");
+            text.text = "Тут пусто";
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            text.text = string.Empty;
+            text.text = "";
     }
 }

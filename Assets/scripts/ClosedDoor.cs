@@ -1,10 +1,10 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] private TMP_Text helpMessage;
+    [SerializeField] private Text helpMessage;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
