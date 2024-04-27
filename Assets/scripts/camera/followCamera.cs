@@ -10,7 +10,9 @@ namespace Camera
     
         void Update()
         {
-            transform.position = Vector2.Lerp(transform.position, target.position, cameraSpeed * Time.deltaTime);
+            var newPos = Vector3.Lerp(transform.position, target.position, cameraSpeed * Time.deltaTime);
+            newPos.z = -10;
+            transform.position = newPos;
         }
     }
 }
