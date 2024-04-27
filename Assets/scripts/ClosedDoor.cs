@@ -1,17 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ClosedDoor : MonoBehaviour
+public class Door : MonoBehaviour
 {
     [SerializeField] private TMP_Text helpMessage;
-    [SerializeField] private GameObject openedDoor;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             var player = other.GetComponent<player>();
-            helpMessage.text = player.hasKey ? "E - открыть дверь" : "Найдите ключ";
+            helpMessage.text = player.hasKey ? "E - покинуть воспоминание" : "Найдите ключ";
         }
     }
 
@@ -19,8 +19,7 @@ public class ClosedDoor : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<player>().hasKey && Input.GetKey(KeyCode.E))
         {
-            Instantiate(openedDoor, transform.position, transform.rotation);
-            Destroy(gameObject);
+            SceneManager.LoadScene("ShellGame");
         }
     }
 

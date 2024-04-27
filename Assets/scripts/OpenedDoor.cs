@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenedDoor : MonoBehaviour
 {
@@ -16,7 +14,8 @@ public class OpenedDoor : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        //if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+            SceneManager.LoadScene("ShellGame");
     }
 
     private void OnTriggerExit2D(Collider2D other)

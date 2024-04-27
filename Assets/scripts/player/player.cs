@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,14 +8,12 @@ public class player : MonoBehaviour
     [SerializeField] private float moveSpeed;
 
     public static Transform Instance { get; }
-
     
     private Vector2 movement;
     private Rigidbody2D rb;
     private bool facingRight = true;
     public bool hasKey;
 
-    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,6 +27,11 @@ public class player : MonoBehaviour
         
         if (facingRight && movement.x > 1e-8 || !facingRight && movement.x < -1e-8)
             Flip();
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        gameObject.GetComponent<Rigidbody2D>().WakeUp();
     }
 
     private void Flip()
