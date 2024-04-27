@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<player>().hasKey && Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("Final");
+            SceneManager.LoadScene("FinalScene");
         }
     }
 
