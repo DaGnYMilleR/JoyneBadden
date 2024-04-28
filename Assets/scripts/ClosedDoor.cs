@@ -1,10 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Door : MonoBehaviour
 {
     [SerializeField] private Text helpMessage;
+    [SerializeField] private GameObject csb;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,7 +19,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<player>().hasKey && Input.GetKey(KeyCode.E))
         {
-            SceneManager.LoadScene("FinalScene");
+            csb.SetActive(true);
         }
     }
 
