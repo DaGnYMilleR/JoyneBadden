@@ -43,4 +43,8 @@ public class shall2 : MonoBehaviour
             }
         }
     }
+
+    private void OnMouseDown(){
+        gameObject.SetActive(false);
+    }
 }
