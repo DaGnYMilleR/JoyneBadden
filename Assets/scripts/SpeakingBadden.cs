@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class SpeakingBadden : MonoBehaviour
 {
     public bool isSpeaking;
+    [SerializeField] private GameObject csb;
 
     private Animator animator;
     private bool enterPressed;
@@ -78,7 +79,7 @@ public class SpeakingBadden : MonoBehaviour
         {
             if (i + 1 == phrases.Length)
             {
-                SceneManager.LoadScene("BabyBaddenRoom");
+                csb.SetActive(true);
             }
             else
             {
