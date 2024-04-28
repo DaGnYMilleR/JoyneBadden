@@ -7,16 +7,24 @@ public class shall2 : MonoBehaviour
     [SerializeField] private Transform target1;
     [SerializeField] private Transform target2;
     [SerializeField] private Transform target3;
+    [SerializeField] private Transform targetToUp;
     private NavMeshAgent Agent;
+
+    public static Vector3 defaulPosition;
     
     [SerializeField] private int shallNumber = 1;
-    [SerializeField] private int countToEnd = 600;
- 
+    [SerializeField] private int countToEnd;
+    
+
+
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
+
+        defaulPosition = transform.position;
+
     }
 
     void Update()
@@ -42,5 +50,14 @@ public class shall2 : MonoBehaviour
                     break;
             }
         }
+    }
+    private void OnMouseDown()
+    {
+        Agent.SetDestination(targetToUp.position);
+    }
+    
+    public void ResetToDefault()
+    {
+        transform.position = defaulPosition;
     }
 }
