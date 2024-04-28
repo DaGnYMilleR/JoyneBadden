@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - TriggerToOpen
+  - shall1
+  - shall2
+  - shall3
   layers:
   - Default
   - TransparentFX
