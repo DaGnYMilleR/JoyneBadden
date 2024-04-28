@@ -5,6 +5,8 @@ public class Door : MonoBehaviour
 {
     [SerializeField] private Text helpMessage;
     [SerializeField] private GameObject csb;
+    public AudioSource _as;
+    public AudioClip audio;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,6 +21,8 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.GetComponent<player>().hasKey && Input.GetKey(KeyCode.E))
         {
+            _as.clip = audio;
+            _as.Play();
             csb.SetActive(true);
         }
     }
