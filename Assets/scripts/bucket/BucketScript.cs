@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BucketScript : MonoBehaviour
 {
-    private float _damping = 10;
+    private float _damping = 1;
     void Start()
     {
     }
@@ -11,8 +11,15 @@ public class BucketScript : MonoBehaviour
     {
     }
 
-    public void Move(Vector3 target)
+    public bool Move(Vector3 target)
     {
+        transform.position = Vector3.Lerp(transform.position, target, Time.deltaTime);
+
+        if (transform.position == target)
+            return true;
+
+        return false;
+        
         var i = 0f;
         while (i < 1.0) {
             i += Time.deltaTime * _damping;
@@ -22,6 +29,7 @@ public class BucketScript : MonoBehaviour
 
     public void MoveParabolic(Vector3 target)
     {
+        //transform.position = Vector3.Slerp(transform.position, target, Time.deltaTime);
         var i = 0f;
         while (i < 1.0) {
             i += Time.deltaTime * _damping;
