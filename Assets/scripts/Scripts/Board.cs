@@ -161,6 +161,7 @@ public class Board : MonoBehaviour
             }
         }
 
+        player.WordlySolved = true;
         return true;
     }
 
