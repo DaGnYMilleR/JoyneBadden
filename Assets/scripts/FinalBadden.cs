@@ -15,7 +15,7 @@ public class FinalBadden : MonoBehaviour
     [SerializeField] private Text text;
     private IEnumerator enumerator;
     private int i;
-    private string[] phrases = { "Вспомнил..." };
+    private string[] phrases = { "Вспомнил... Геометрия блять!" };
 
 
     private void Start()

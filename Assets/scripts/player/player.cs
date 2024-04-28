@@ -13,7 +13,7 @@ public class player : MonoBehaviour
     private bool facingRight = true;
     
     public bool hasKey;
-    public bool wordlySolved;
+    public static bool WordlySolved;
     
     void Start()
     {

@@ -1,33 +1,29 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SecondDoor : MonoBehaviour
+public class Button : MonoBehaviour
 {
     [SerializeField] private Text text;
-    [SerializeField] private GameObject csb;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
-            text.text = player.WordlySolved ? "E - вспомнить" : "Узнайте слово";
-        }
+            text.text = "E - решить головоломку";
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && player.WordlySolved && Input.GetKey(KeyCode.E))
+        if (other.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            csb.SetActive(true);
+            SceneManager.LoadScene("Wordle");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-        {
             text.text = string.Empty;
-        }
     }
 }
