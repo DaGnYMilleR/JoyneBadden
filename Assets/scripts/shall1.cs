@@ -13,12 +13,18 @@ public class shall1 : MonoBehaviour
     
     [SerializeField] private int shallNumber = 1;
     [SerializeField] private int countToEnd = 600;
+
+    private Animator animator;
+
+    [SerializeField] private bool playAnimation = false; 
     
     void Start()
     {
         Agent = GetComponent<NavMeshAgent>();
         Agent.updateRotation = false;
         Agent.updateUpAxis = false;
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -30,16 +36,23 @@ public class shall1 : MonoBehaviour
                 case 1:
                     Agent.SetDestination(target2.position);
                     shallNumber = 2;
-                    countToEnd--;                    break;
+                    countToEnd--;                    
+                    break;
                 case 2:
                     Agent.SetDestination(target3.position);
                     shallNumber = 3;
-                    countToEnd--;                    break;
+                    countToEnd--;                    
+                    break;
                 case 3:
                     Agent.SetDestination(target1.position);
                     shallNumber = 1;
-                    countToEnd--;                    break;
+                    countToEnd--;                    
+                    break;
             }
         }
+    }
+
+    private void OnMouseDown(){
+        animator.SetBool("BucketGoUp", true);
     }
 }
